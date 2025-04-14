@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 62.5% de 16px = 10px; 1.6rem = 16px;  2.4rem = 24px */
+}
+/* ==================== VARIÁVEIS CSS ================ */
+:root {
+  /* Fontes e tamanhos */
+  --font-family: 'Space Grotesk', sans-serif;
+  --h1-desktop: 6rem;
+  --h2-desktop: 4rem;
+  --h3-desktop: 3rem;
+  --h4-desktop: 2rem;
+  --p-desktop: 1.8rem;
+
+  /* Cores */
+  --color-destaque: #b9ff66;
+  --color-bg-gray: #f3f3f3;
+  --color-bg-drak: #191a23;
+  --color-bg-white: #ffffff;
+}
