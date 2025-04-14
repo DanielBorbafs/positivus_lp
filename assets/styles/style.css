@@ -1,12 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 html {
   font-size: 62.5%; /* 62.5% de 16px = 10px; 1.6rem = 16px;  2.4rem = 24px */
 }
+
 /* ==================== VARIÁVEIS CSS ================ */
 :root {
   /* Fontes e tamanhos */
@@ -17,9 +12,108 @@ html {
   --h4-desktop: 2rem;
   --p-desktop: 1.8rem;
 
+  --icon-desktop: 3.6rem;
   /* Cores */
   --color-destaque: #b9ff66;
   --color-bg-gray: #f3f3f3;
   --color-bg-drak: #191a23;
   --color-bg-white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ====================== HEADER ====================*/
+header {
+  padding-top: 1.6rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#toggle {
+  font-size: 3.2rem;
+  color: var(--color-bg-drak);
+  display: none;
+}
+.logo__container {
+  display: flex;
+  justify-content: start;
+  flex-direction: row-reverse;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  & i {
+    font-size: var(--icon-desktop);
+  }
+  & a {
+    font-size: var(--h3-desktop);
+    color: var(--color-bg-drak);
+    font-weight: 600;
+  }
+}
+
+.nav__container_list {
+  display: flex;
+  gap: 4rem;
+  font-size: var(--p-desktop);
+  align-items: center;
+  & a {
+    color: var(--color-bg-drak);
+  }
+  & .nav__btn {
+    padding: 2rem 3rem;
+    border: 0.01rem solid var(--color-bg-drak);
+    border-radius: 1.4rem;
+  }
+}
+
+.show-menu {
+  display: inline;
+}
+
+@media (width <= 576px) {
+  .logo__container {
+    padding-left: 1rem;
+  }
+  #toggle {
+    display: inline;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2rem;
+  }
+  .nav__container_list {
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+    display: none;
+    background: var(--color-bg-gray);
+    -webkit-box-shadow: -2px 18px 25px -17px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: -2px 18px 25px -17px rgba(0, 0, 0, 0.28);
+    box-shadow: -2px 18px 25px -17px rgba(0, 0, 0, 0.28);
+  }
+
+  #navBar.show-menu .nav__container_list {
+    transition: 0.85s all ease-in-out;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
 }
