@@ -11,7 +11,7 @@ html {
   --h3-desktop: 3rem;
   --h4-desktop: 2rem;
   --p-desktop: 1.8rem;
-
+  --p-destkop-alternate: 1.8rem;
   --h1-mobile: 4.2rem;
   --p-mobile: 1.6rem;
 
@@ -273,6 +273,80 @@ header {
   }
 }
 
+/* ====================== SERVICES SECTION ====================*/
+
+.services {
+  margin-top: 8rem;
+  margin-bottom: 1rem;
+}
+.services__list {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.services__text {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  & h2 {
+    font-size: var(--h2-desktop);
+    background-color: var(--color-destaque);
+    padding: 0.5rem;
+  }
+  & p {
+    font-size: var(--p-destkop-alternate);
+    text-align: start;
+    color: var(--color-bg-drak);
+  }
+}
+
+.services__card {
+  background-color: var(--color-bg-gray);
+  display: flex;
+  align-items: center;
+  padding: 2.4rem;
+  border-radius: 4rem;
+  border: 1px solid;
+  border-bottom: 4px solid;
+  overflow: hidden;
+  width: 600px;
+  height: 250px;
+  justify-content: space-between;
+}
+
+.services__card__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  & h3 {
+    font-size: 3.2rem;
+    width: 230px;
+    background-color: var(--color-destaque);
+  }
+  & p {
+    font-size: var(--p-destkop-alternate);
+  }
+}
+
+.card__green {
+  background-color: var(--color-destaque);
+  & .services__card__text h3 {
+    background-color: #ffffff;
+  }
+}
+
+.card__black {
+  background-color: var(--color-bg-drak);
+  & .services__card__text h3 {
+    background-color: #ffffff;
+  }
+  & .services__card__text p {
+    color: var(--color-bg-white);
+  }
+}
+
 @media (width <= 576px) {
   .hero__container {
     display: flex;
@@ -293,6 +367,27 @@ header {
     & h2 {
       font-size: 2.8rem;
       z-index: -1;
+    }
+  }
+
+  .services__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    & p {
+      text-align: center;
+    }
+  }
+
+  .services__list {
+    padding: 1rem;
+  }
+  .services__card__text {
+    width: 120px;
+    & h3 {
+      font-size: 3rem;
+      z-index: 1;
+      text-align: center;
     }
   }
 }
