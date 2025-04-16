@@ -276,7 +276,7 @@ header {
 /* ====================== SERVICES SECTION ====================*/
 
 .services {
-  margin-top: 8rem;
+  margin-top: 10rem;
   margin-bottom: 1rem;
 }
 .services__list {
@@ -451,5 +451,46 @@ header {
   }
   .services__card {
     width: 45%;
+  }
+}
+
+/* ====================== CASE SECTION ====================*/
+
+.case {
+  margin-top: 10rem;
+}
+
+.case__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: red;
+  margin-top: 6rem;
+  background-color: var(--color-bg-drak);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.case__card {
+  padding: 5rem 4rem;
+  & p {
+    font-size: var(--p-destkop-alternate);
+    color: var(--color-bg-gray);
+  }
+  & .case__card_link {
+    font-size: var(--p-destkop-alternate);
+    & a {
+      color: var(--color-destaque);
+    }
+  }
+}
+
+.case__card_link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  & i {
+    color: var(--color-destaque);
+    font-size: 2rem;
   }
 }
