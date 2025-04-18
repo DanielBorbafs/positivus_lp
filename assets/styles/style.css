@@ -516,6 +516,60 @@ header {
 
 /* ======================= TEAM CONTAINER =================*/
 .team {
+  margin-top: 10rem;
+}
+.team__list {
+  margin-top: 5rem;
+}
+
+.card__team {
+  border: 1px solid var(--color-bg-drak);
+  border-radius: 4.5rem;
+  border-bottom: 0.8rem solid;
+  padding: 1.6rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6em;
+  max-width: 400px;
+  & p {
+    font-size: var(--p-destkop-alternate);
+  }
+}
+.card__team__intro {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  & .card__team__intro__name {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: end;
+    & span {
+      display: flex;
+      font-size: var(--h4-desktop);
+    }
+  }
+  & i {
+    font-size: 32px;
+    position: absolute;
+    padding: 1.5rem;
+    top: 0;
+    right: 0;
+  }
+}
+.team__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.card__team__intro__name span:nth-child(1) {
+  font-weight: 700;
 }
 
 @media (width <= 576px) {
