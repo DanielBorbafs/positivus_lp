@@ -218,6 +218,132 @@
           </article>
         </div>
       </section>
+      <section class="container guide">
+        <div class="services__text guide__text">
+          <h2>Our working Process</h2>
+          <p>
+            During the initial consultation, we will discuss your business goals
+            and objectives, target audience, and current marketing efforts. This
+            will allow us to understand your needs and tailor our services to
+            best fit your requirements.
+          </p>
+        </div>
+
+        <div class="guide__list">
+          <div class="guide__card">
+            <div class="guide__card__title">
+              <div class="guide__card__title__text">
+                <span>01</span>
+                <h4>Consultation</h4>
+              </div>
+              <i class="bx bx-plus showGuide"></i>
+            </div>
+            <div class="line"></div>
+            <p class="guideText">
+              During the initial consultation, we will discuss your business
+              goals and objectives, target audience, and current marketing
+              efforts. This will allow us to understand your needs and tailor
+              our services to best fit your requirements.
+            </p>
+          </div>
+          <div class="guide__card">
+            <div class="guide__card__title">
+              <div class="guide__card__title__text">
+                <span>01</span>
+                <h4>Consultation</h4>
+              </div>
+              <i class="bx bx-plus showGuide"></i>
+            </div>
+            <div class="line"></div>
+            <p class="guideText">
+              During the initial consultation, we will discuss your business
+              goals and objectives, target audience, and current marketing
+              efforts. This will allow us to understand your needs and tailor
+              our services to best fit your requirements.
+            </p>
+          </div>
+          <div class="guide__card">
+            <div class="guide__card__title">
+              <div class="guide__card__title__text">
+                <span>01</span>
+                <h4>Consultation</h4>
+              </div>
+              <i class="bx bx-plus showGuide"></i>
+            </div>
+            <div class="line"></div>
+            <p class="guideText">
+              During the initial consultation, we will discuss your business
+              goals and objectives, target audience, and current marketing
+              efforts. This will allow us to understand your needs and tailor
+              our services to best fit your requirements.
+            </p>
+          </div>
+          <div class="guide__card">
+            <div class="guide__card__title">
+              <div class="guide__card__title__text">
+                <span>01</span>
+                <h4>Consultation</h4>
+              </div>
+              <i class="bx bx-plus showGuide"></i>
+            </div>
+            <div class="line"></div>
+            <p class="guideText">
+              During the initial consultation, we will discuss your business
+              goals and objectives, target audience, and current marketing
+              efforts. This will allow us to understand your needs and tailor
+              our services to best fit your requirements.
+            </p>
+          </div>
+          <div class="guide__card">
+            <div class="guide__card__title">
+              <div class="guide__card__title__text">
+                <span>01</span>
+                <h4>Consultation</h4>
+              </div>
+              <i class="bx bx-plus showGuide"></i>
+            </div>
+            <div class="line"></div>
+            <p class="guideText">
+              During the initial consultation, we will discuss your business
+              goals and objectives, target audience, and current marketing
+              efforts. This will allow us to understand your needs and tailor
+              our services to best fit your requirements.
+            </p>
+          </div>
+          <div class="guide__card">
+            <div class="guide__card__title">
+              <div class="guide__card__title__text">
+                <span>01</span>
+                <h4>Consultation</h4>
+              </div>
+              <i class="bx bx-plus showGuide"></i>
+            </div>
+            <div class="line"></div>
+            <p class="guideText">
+              During the initial consultation, we will discuss your business
+              goals and objectives, target audience, and current marketing
+              efforts. This will allow us to understand your needs and tailor
+              our services to best fit your requirements.
+            </p>
+          </div>
+          <div class="guide__card">
+            <div class="guide__card__title">
+              <div class="guide__card__title__text">
+                <span>01</span>
+                <h4>Consultation</h4>
+              </div>
+              <i class="bx bx-plus showGuide"></i>
+            </div>
+            <div class="line"></div>
+            <p class="guideText">
+              During the initial consultation, we will discuss your business
+              goals and objectives, target audience, and current marketing
+              efforts. This will allow us to understand your needs and tailor
+              our services to best fit your requirements.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
     <script
@@ -236,6 +362,27 @@
       }
 
       showMenu();
+
+      function showGuides() {
+        const btns = document.querySelectorAll('.showGuide');
+
+        btns.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const text = btn
+              .closest('.guide__card')
+              .querySelector('.guideText');
+            const card = btn.closest('.guide__card');
+
+            text.classList.toggle('show-menu');
+            card.classList.toggle('active');
+
+            btn.classList.toggle('bx-plus');
+            btn.classList.toggle('bx-minus');
+          });
+        });
+      }
+
+      showGuides();
     </script>
   </body>
 </html>
