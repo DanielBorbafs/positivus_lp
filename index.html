@@ -432,6 +432,72 @@
           </div>
         </div>
       </section>
+
+      <section class="container feedback-carousel">
+        <div class="list__feedbacks__text">
+          <div class="feedbacks__text">
+            <p>
+              "We have been working with Positivus for the past year and have
+              seen a significant increase in website traffic and leads as a
+              result of their efforts. The team is professional, responsive, and
+              truly cares about the success of our business. We highly recommend
+              Positivus to any company looking to grow their online presence."
+            </p>
+            <span>John Smith</span>
+            <span>Marketing director at XYZ Corp</span>
+          </div>
+          <div class="feedbacks__text">
+            <p>
+              "Positivus transformed our digital marketing strategy completely.
+              Their innovative approach and attention to detail helped us double
+              our conversion rates in just six months. The team is always
+              available to answer questions and provide insights."
+            </p>
+            <span>Sarah Johnson</span>
+            <span>CEO at ABC Inc</span>
+          </div>
+          <div class="feedbacks__text">
+            <p>
+              "As a small business, we were skeptical about hiring an agency,
+              but Positivus proved to be worth every penny. They understand our
+              niche market and created campaigns that actually speak to our
+              customers. Our sales have increased by 40% since we started
+              working with them."
+            </p>
+            <span>Michael Brown</span>
+            <span>Owner of Brown's Bakery</span>
+          </div>
+          <div class="feedbacks__text">
+            <p>
+              "As a small business, we were skeptical about hiring an agency,
+              but Positivus proved to be worth every penny. They understand our
+              niche market and created campaigns that actually speak to our
+              customers. Our sales have increased by 40% since we started
+              working with them."
+            </p>
+            <span>Michael Brown</span>
+            <span>Owner of Brown's Bakery</span>
+          </div>
+          <div class="feedbacks__text">
+            <p>
+              "As a small business, we were skeptical about hiring an agency,
+              but Positivus proved to be worth every penny. They understand our
+              niche market and created campaigns that actually speak to our
+              customers. Our sales have increased by 40% since we started
+              working with them."
+            </p>
+            <span>Michael Brown</span>
+            <span>Owner of Brown's Bakery</span>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-prev" aria-label="Previous feedback">
+            ‹
+          </button>
+          <div class="carousel-dots"></div>
+          <button class="carousel-next" aria-label="Next feedback">›</button>
+        </div>
+      </section>
     </main>
     <footer></footer>
     <script
@@ -471,6 +537,71 @@
       }
 
       showGuides();
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const carousel = document.querySelector('.list__feedbacks__text');
+        const prevBtn = document.querySelector('.carousel-prev');
+        const nextBtn = document.querySelector('.carousel-next');
+        const dotsContainer = document.querySelector('.carousel-dots');
+        const feedbackItems = document.querySelectorAll('.feedbacks__text');
+
+        // Create dots
+        feedbackItems.forEach((_, index) => {
+          const dot = document.createElement('button');
+          dot.classList.add('carousel-dot');
+          if (index === 0) dot.classList.add('active');
+          dot.addEventListener('click', () => goToSlide(index));
+          dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.carousel-dot');
+        let currentIndex = 0;
+
+        // Update carousel position and active dot
+        function updateCarousel() {
+          const itemWidth = feedbackItems[0].offsetWidth + 24; // width + gap
+          carousel.scrollTo({
+            left: currentIndex * itemWidth,
+            behavior: 'smooth',
+          });
+
+          dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+          });
+        }
+
+        function goToSlide(index) {
+          currentIndex = index;
+          updateCarousel();
+        }
+
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % feedbackItems.length;
+          updateCarousel();
+        }
+
+        function prevSlide() {
+          currentIndex =
+            (currentIndex - 1 + feedbackItems.length) % feedbackItems.length;
+          updateCarousel();
+        }
+
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Auto-advance (optional)
+        let autoSlide = setInterval(nextSlide, 5000);
+
+        carousel.addEventListener('mouseenter', () => clearInterval(autoSlide));
+        carousel.addEventListener('mouseleave', () => {
+          autoSlide = setInterval(nextSlide, 5000);
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', updateCarousel);
+      });
     </script>
   </body>
 </html>
