@@ -33,16 +33,15 @@
     <header>
       <nav class="nav container" id="navBar">
         <div class="logo__container">
-          <a href="#" class="logo">Positivus</a>
-          <i class="bx bxs-star"></i>
+          <img src="./assets/imgs/logo.png" alt="" />
         </div>
         <div class="nav__container_list">
-          <a href="#">About us</a>
-          <a href="#">Services</a>
-          <a href="#">use Cases</a>
-          <a href="#">Pricing</a>
-          <a href="#">Blog</a>
-          <a href="#" class="nav__btn">Request a quote </a>
+          <a href="#services">Serviços</a>
+          <a href="#casos">Casos</a>
+          <a href="#fluxo">Fluxo de Trabalho</a>
+          <a href="#time">Time</a>
+          <a href="#feedbacks">Feedbacks</a>
+          <a href="#footer" class="nav__btn">Entrar em contato</a>
         </div>
       </nav>
       <i class="bx bx-menu" id="toggle"></i>
@@ -51,16 +50,20 @@
       <section class="container hero">
         <div class="row hero__container">
           <div class="col-12 col-lg-6 hero__text">
-            <h1>Navigating the digital landscape for success</h1>
+            <h1>
+              Cansado de resultados tímidos nas redes sociais? Nós temos a
+              solução
+            </h1>
             <p>
-              Our digital marketing agency helps businesses grow and succeed
-              online through a range of services including SEO, PPC, social
-              media marketing, and content creation.
+              Entendemos os desafios de fazer sua empresa se destacar no mundo
+              digital. Nossa agência oferece soluções de marketing
+              personalizadas para impulsionar seu crescimento, engajar seu
+              público e, o mais importante, aumentar seus lucros.
             </p>
-            <a href="#">Book a consultation</a>
+            <a href="#services">Conheça nossos serviços</a>
           </div>
           <div class="col-12 col-lg-6 hero__img">
-            <img src="./assets/imgs/hero_ilustration.svg" alt="" />
+            <img src="./assets/imgs/hero.png" alt="" />
           </div>
         </div>
       </section>
@@ -73,21 +76,23 @@
           <div class="slide-track">
             <!-- Lista original de marcas -->
             <div class="slide">
-              <img src="./assets/imgs/marcas01.svg" alt="Marca 1" />
+              <img src="./assets/imgs/img__marca01.png" alt="Marca 1" />
             </div>
             <div class="slide">
-              <img src="./assets/imgs/marcas01.svg" alt="Marca 2" />
+              <img src="./assets/imgs/img__marca02.png" alt="Marca 2" />
             </div>
             <div class="slide">
-              <img src="./assets/imgs/marcas01.svg" alt="Marca 3" />
+              <img src="./assets/imgs/img__marca03.png" alt="Marca 3" />
             </div>
             <div class="slide">
-              <img src="./assets/imgs/marcas01.svg" alt="Marca 4" />
+              <img src="./assets/imgs/img__marca04.png" alt="Marca 4" />
             </div>
             <div class="slide">
-              <img src="./assets/imgs/marcas01.svg" alt="Marca 5" />
+              <img src="./assets/imgs/img__marca05.png" alt="Marca 5" />
             </div>
-
+            <div class="slide">
+              <img src="./assets/imgs/img__marca06.png" alt="Marca 6" />
+            </div>
             <!-- Duplicação das marcas para efeito contínuo -->
             <div class="slide">
               <img src="./assets/imgs/marcas01.svg" alt="Marca 1" />
@@ -107,54 +112,74 @@
           </div>
         </div>
       </section>
-      <section class="container services">
+      <section class="container services" id="services">
         <div class="services__text">
-          <h2>Services</h2>
+          <h2>Serviços</h2>
           <p>
-            At our digital marketing agency, we offer a range of services to<br />
-            help businesses grow and succeed online. These services include:
+            Em nossa agência de marketing digital, oferecemos uma gama de
+            serviços para<br />
+            ajudar empresas a crescer e ter sucesso online. Esses serviços
+            incluem:
           </p>
         </div>
         <div class="row services__list">
           <article class="col-lg-6 services__card">
             <div class="services__card__text">
-              <h3>Search engine optimization</h3>
-              <p>Learn more</p>
+              <h3>Marketing digital</h3>
+              <div class="services__card__link">
+                <i class="bx bx-right-arrow-alt"></i>
+                <p>Saiba Mais</p>
+              </div>
             </div>
             <img src="./assets/imgs/card_01.svg" alt="" />
           </article>
           <article class="col-lg-6 services__card card__green">
             <div class="services__card__text">
-              <h3>Pay-per-click advertising</h3>
-              <p>Learn more</p>
+              <h3>Gerenciamento de Redes Sociais</h3>
+              <div class="services__card__link">
+                <i class="bx bx-right-arrow-alt"></i>
+                <p>Saiba Mais</p>
+              </div>
             </div>
             <img src="./assets/imgs/card_02.svg" alt="" />
           </article>
           <article class="col-lg-6 services__card card__black">
             <div class="services__card__text">
-              <h3>Social Media Marketing</h3>
-              <p>Learn more</p>
+              <h3>Otimização de Sites (SEO)</h3>
+              <div class="services__card__link dark">
+                <i class="bx bx-right-arrow-alt"></i>
+                <p>Saiba Mais</p>
+              </div>
             </div>
             <img src="./assets/imgs/card_03.svg" alt="" />
           </article>
           <article class="col-lg-6 services__card">
             <div class="services__card__text">
-              <h3>Email Marketing</h3>
-              <p>Learn more</p>
+              <h3>Análise de Dados</h3>
+              <div class="services__card__link">
+                <i class="bx bx-right-arrow-alt"></i>
+                <p>Saiba Mais</p>
+              </div>
             </div>
             <img src="./assets/imgs/card_04.svg" alt="" />
           </article>
           <article class="col-lg-6 services__card card__green">
             <div class="services__card__text">
-              <h3>Content Creation</h3>
-              <p>Learn more</p>
+              <h3>Criaçã de Conteúdo</h3>
+              <div class="services__card__link">
+                <i class="bx bx-right-arrow-alt"></i>
+                <p>Saiba Mais</p>
+              </div>
             </div>
             <img src="./assets/imgs/card_05.svg" alt="" />
           </article>
           <article class="col-lg-6 services__card card__black">
             <div class="services__card__text">
-              <h3>Analytics and Tracking</h3>
-              <p>Learn more</p>
+              <h3>E-mail Marketing</h3>
+              <div class="services__card__link dark">
+                <i class="bx bx-right-arrow-alt"></i>
+                <p>Saiba Mais</p>
+              </div>
             </div>
             <img src="./assets/imgs/card_06.svg" alt="" />
           </article>
@@ -162,71 +187,64 @@
       </section>
       <section class="container proposal">
         <div class="proposal__text">
-          <h4>Let's make things happen</h4>
+          <h4>Vamos fazer as coisas acontecerem</h4>
           <p>
-            Contact us today to learn more about how our digital marketing
-            services<br />
-            can help your business grow and succeed online.
+            Entre em contato conosco hoje mesmo para saber mais <br />sobre como
+            nossos serviços de marketing digital podem ajudar <br />sua empresa
+            a crescer e ter sucesso online.
           </p>
-          <a href="#">Book a consultation</a>
+          <a href="#">Entrar em contato</a>
         </div>
         <div class="proposal__img">
-          <img src="./assets/imgs/img_proposal.svg" alt="" />
+          <img src="./assets/imgs/contact_hero.svg" alt="" />
         </div>
       </section>
-      <section class="container case">
+      <section class="container case" id="casos">
         <div class="services__text">
-          <h2>Case Studies</h2>
+          <h2>Casos Reais</h2>
           <p>
-            Explore Real-Life Examples of Our Proven Digital<br />Marketing
-            Success through Our Case Studies
+            Explore exemplos reais do nosso sucesso comprovado<br />
+            em marketing digital por meio de nossos estudos de caso
           </p>
         </div>
         <div class="row case__list">
           <article class="col-lg-3 case__card">
             <p>
-              For a local restaurant, we implemented a targeted PPC campaign
-              that resulted in a 50% increase in website traffic and a 25%
-              increase in sales.
+              Para loja online: Estratégia completa impulsionou 40% no tráfego
+              orgânico e 30% nas vendas online. E-mail marketing fidelizou
+              clientes, gerando 15% de receita recorrente.
             </p>
             <div class="case__card_link">
               <i class="bx bx-right-arrow-alt"></i>
-              <a href="#">Lear more</a>
+              <a href="#">Saiba Mais</a>
             </div>
           </article>
           <article class="col-lg-3 case__card">
             <p>
-              For a local restaurant, we implemented a targeted PPC campaign
-              that resulted in a 50% increase in website traffic and a 25%
-              increase in sales.
+              Para clínica odontológica: Otimização SEO elevou tráfego orgânico
+              qualificado em 70% e agendamentos via site em 35%.
             </p>
             <div class="case__card_link">
               <i class="bx bx-right-arrow-alt"></i>
-              <a href="#">Lear more</a>
+              <a href="#">Saiba Mais</a>
             </div>
           </article>
           <article class="col-lg-3 case__card">
             <p>
-              For a local restaurant, we implemented a targeted PPC campaign
-              that resulted in a 50% increase in website traffic and a 25%
-              increase in sales.
+              Para e-commerce artesanal: Campanhas segmentadas aumentaram
+              abertura em 20%, cliques em 15% e vendas diretas em 10%.
             </p>
             <div class="case__card_link">
               <i class="bx bx-right-arrow-alt"></i>
-              <a href="#">Lear more</a>
+              <a href="#">Saiba Mais</a>
             </div>
           </article>
         </div>
       </section>
-      <section class="container guide">
+      <section class="container guide" id="fluxo">
         <div class="services__text guide__text">
-          <h2>Our working Process</h2>
-          <p>
-            During the initial consultation, we will discuss your business goals
-            and objectives, target audience, and current marketing efforts. This
-            will allow us to understand your needs and tailor our services to
-            best fit your requirements.
-          </p>
+          <h2>Fluxo de Trabalho</h2>
+          <p>Guia passo a passo para atingir seus objetivos de negócios</p>
         </div>
 
         <div class="guide__list">
@@ -234,114 +252,112 @@
             <div class="guide__card__title">
               <div class="guide__card__title__text">
                 <span>01</span>
-                <h4>Consultation</h4>
+                <h4>Consulta Inicial</h4>
               </div>
               <i class="bx bx-plus showGuide"></i>
             </div>
             <div class="line"></div>
             <p class="guideText">
-              During the initial consultation, we will discuss your business
-              goals and objectives, target audience, and current marketing
-              efforts. This will allow us to understand your needs and tailor
-              our services to best fit your requirements.
+              Durante a consulta inicial, discutiremos seus objetivos de
+              negócios, público-alvo e esforços de marketing atuais. Isso nos
+              permitirá entender suas necessidades e adaptar nossos serviços
+              para melhor atender aos seus requisitos.
             </p>
           </div>
           <div class="guide__card">
             <div class="guide__card__title">
               <div class="guide__card__title__text">
                 <span>02</span>
-                <h4>Research and Strategy Development</h4>
+                <h4>Análise e Diagnóstico</h4>
               </div>
               <i class="bx bx-plus showGuide"></i>
             </div>
             <div class="line"></div>
             <p class="guideText">
-              During the initial consultation, we will discuss your business
-              goals and objectives, target audience, and current marketing
-              efforts. This will allow us to understand your needs and tailor
-              our services to best fit your requirements.
+              Realizaremos uma análise aprofundada do seu mercado, concorrência,
+              presença online e dados existentes. Identificaremos oportunidades
+              de melhoria e os principais desafios a serem superados.
             </p>
           </div>
           <div class="guide__card">
             <div class="guide__card__title">
               <div class="guide__card__title__text">
                 <span>03</span>
-                <h4>Implementation</h4>
+                <h4>Estratégia Personalizada</h4>
               </div>
               <i class="bx bx-plus showGuide"></i>
             </div>
             <div class="line"></div>
             <p class="guideText">
-              During the initial consultation, we will discuss your business
-              goals and objectives, target audience, and current marketing
-              efforts. This will allow us to understand your needs and tailor
-              our services to best fit your requirements.
+              Com base na análise, desenvolveremos uma estratégia de marketing
+              digital personalizada e detalhada, definindo metas claras, táticas
+              específicas e os canais de comunicação mais eficazes para o seu
+              negócio.
             </p>
           </div>
           <div class="guide__card">
             <div class="guide__card__title">
               <div class="guide__card__title__text">
                 <span>04</span>
-                <h4>Monitoring and Optimization</h4>
+                <h4>Implementação e Execução</h4>
               </div>
               <i class="bx bx-plus showGuide"></i>
             </div>
             <div class="line"></div>
             <p class="guideText">
-              During the initial consultation, we will discuss your business
-              goals and objectives, target audience, and current marketing
-              efforts. This will allow us to understand your needs and tailor
-              our services to best fit your requirements.
+              Colocaremos a estratégia em prática, executando as ações
+              planejadas nos diversos canais de marketing digital, como redes
+              sociais, SEO, anúncios pagos, criação de conteúdo e e-mail
+              marketing.
             </p>
           </div>
           <div class="guide__card">
             <div class="guide__card__title">
               <div class="guide__card__title__text">
                 <span>05</span>
-                <h4>Reporting and Communication</h4>
+                <h4>Monitoramento e Otimização</h4>
               </div>
               <i class="bx bx-plus showGuide"></i>
             </div>
             <div class="line"></div>
             <p class="guideText">
-              During the initial consultation, we will discuss your business
-              goals and objectives, target audience, and current marketing
-              efforts. This will allow us to understand your needs and tailor
-              our services to best fit your requirements.
+              Monitoraremos continuamente o desempenho das campanhas e métricas
+              chave, realizando ajustes e otimizações conforme necessário para
+              garantir que os objetivos sejam alcançados e os resultados sejam
+              maximizados.
             </p>
           </div>
           <div class="guide__card">
             <div class="guide__card__title">
               <div class="guide__card__title__text">
                 <span>06</span>
-                <h4>Continual Improvement</h4>
+                <h4>Relatórios e Resultados</h4>
               </div>
               <i class="bx bx-plus showGuide"></i>
             </div>
             <div class="line"></div>
             <p class="guideText">
-              During the initial consultation, we will discuss your business
-              goals and objectives, target audience, and current marketing
-              efforts. This will allow us to understand your needs and tailor
-              our services to best fit your requirements.
+              Forneceremos relatórios transparentes e regulares sobre o
+              progresso e os resultados alcançados, analisando o impacto das
+              nossas ações no crescimento e nos lucros da sua empresa.
             </p>
           </div>
         </div>
       </section>
 
-      <section class="container team">
+      <section class="container team" id="time">
         <div class="services__text">
-          <h2>Team</h2>
+          <h2>Nosso time</h2>
           <p>
-            Meet the skilled and experienced team behind<br />
-            our successful digital marketing strategies
+            Conheça a equipe qualificada e experiente por trás de nossas
+            estratégias de marketing digital de sucesso
           </p>
         </div>
 
         <div class="team__list">
           <div class="card__team">
             <div class="card__team__intro">
-              <img src="./assets/imgs/team_card_img.svg" alt="" />
+              <img src="./assets/imgs/img_team01.png" alt="" />
               <div class="card__team__intro__name">
                 <span>Daniel Borba</span>
                 <span>Developer Fullstack</span>
@@ -356,7 +372,7 @@
           </div>
           <div class="card__team">
             <div class="card__team__intro">
-              <img src="./assets/imgs/team_card_img.svg" alt="" />
+              <img src="./assets/imgs/img__team02.png" alt="" />
               <div class="card__team__intro__name">
                 <span>Daniel Borba</span>
                 <span>Developer Fullstack</span>
@@ -371,7 +387,7 @@
           </div>
           <div class="card__team">
             <div class="card__team__intro">
-              <img src="./assets/imgs/team_card_img.svg" alt="" />
+              <img src="./assets/imgs/img__team02.png" alt="" />
               <div class="card__team__intro__name">
                 <span>Daniel Borba</span>
                 <span>Developer Fullstack</span>
@@ -387,7 +403,7 @@
           s
           <div class="card__team">
             <div class="card__team__intro">
-              <img src="./assets/imgs/team_card_img.svg" alt="" />
+              <img src="./assets/imgs/img__team02.png" alt="" />
               <div class="card__team__intro__name">
                 <span>Daniel Borba</span>
                 <span>Developer Fullstack</span>
@@ -402,7 +418,7 @@
           </div>
           <div class="card__team">
             <div class="card__team__intro">
-              <img src="./assets/imgs/team_card_img.svg" alt="" />
+              <img src="./assets/imgs/img__team02.png" alt="" />
               <div class="card__team__intro__name">
                 <span>Daniel Borba</span>
                 <span>Developer Fullstack</span>
@@ -417,7 +433,7 @@
           </div>
           <div class="card__team">
             <div class="card__team__intro">
-              <img src="./assets/imgs/team_card_img.svg" alt="" />
+              <img src="./assets/imgs/img__team02.png" alt="" />
               <div class="card__team__intro__name">
                 <span>Daniel Borba</span>
                 <span>Developer Fullstack</span>
@@ -432,59 +448,40 @@
           </div>
         </div>
       </section>
-
-      <section class="container feedback-carousel">
+      <section class="container feedback-carousel" id="feedbacks">
+        <div class="services__text carousel__title">
+          <h2>Feedbacks</h2>
+          <p>Veja as avaliações reais de nossos clientes</p>
+        </div>
         <div class="list__feedbacks__text">
           <div class="feedbacks__text">
             <p>
-              "We have been working with Positivus for the past year and have
-              seen a significant increase in website traffic and leads as a
-              result of their efforts. The team is professional, responsive, and
-              truly cares about the success of our business. We highly recommend
-              Positivus to any company looking to grow their online presence."
+              "foi um divisor de águas. Começamos a aparecer nas primeiras
+              posições do Google para termos de busca importantes para o nosso
+              negócio. O aumento no tráfego orgânico foi notável e isso se
+              traduziu em mais clientes entrando em contato conosco. Estamos
+              muito satisfeitos com os resultados!"
             </p>
             <span>John Smith</span>
             <span>Marketing director at XYZ Corp</span>
           </div>
           <div class="feedbacks__text">
             <p>
-              "Positivus transformed our digital marketing strategy completely.
-              Their innovative approach and attention to detail helped us double
-              our conversion rates in just six months. The team is always
-              available to answer questions and provide insights."
+              "elevou a nossa comunicação a outro nível. Os artigos para o nosso
+              blog e os posts para as redes sociais são sempre relevantes,
+              informativos e muito bem produzidos. Isso tem nos ajudado a
+              construir autoridade no nosso mercado e a atrair novos leads de
+              forma consistente"
             </p>
             <span>Sarah Johnson</span>
             <span>CEO at ABC Inc</span>
           </div>
           <div class="feedbacks__text">
             <p>
-              "As a small business, we were skeptical about hiring an agency,
-              but Positivus proved to be worth every penny. They understand our
-              niche market and created campaigns that actually speak to our
-              customers. Our sales have increased by 40% since we started
-              working with them."
-            </p>
-            <span>Michael Brown</span>
-            <span>Owner of Brown's Bakery</span>
-          </div>
-          <div class="feedbacks__text">
-            <p>
-              "As a small business, we were skeptical about hiring an agency,
-              but Positivus proved to be worth every penny. They understand our
-              niche market and created campaigns that actually speak to our
-              customers. Our sales have increased by 40% since we started
-              working with them."
-            </p>
-            <span>Michael Brown</span>
-            <span>Owner of Brown's Bakery</span>
-          </div>
-          <div class="feedbacks__text">
-            <p>
-              "As a small business, we were skeptical about hiring an agency,
-              but Positivus proved to be worth every penny. They understand our
-              niche market and created campaigns that actually speak to our
-              customers. Our sales have increased by 40% since we started
-              working with them."
+              "O engajamento com nossos clientes aumentou significativamente e,
+              o melhor de tudo, vimos um impacto direto nas nossas vendas. A
+              equipe é super profissional e sempre disponível para nos ajudar.
+              Recomendamos muito!"
             </p>
             <span>Michael Brown</span>
             <span>Owner of Brown's Bakery</span>
@@ -498,56 +495,15 @@
           <button class="carousel-next" aria-label="Next feedback">›</button>
         </div>
       </section>
-
-      <section class="container contact">
-        <div class="services__text">
-          <h2>Case Studies</h2>
-          <p>
-            Connect with Us: Let's Discuss<br />Your Digital Marketing Needs
-          </p>
-        </div>
-        <div class="container form">
-          <div class="row form__container">
-            <div class="col-lg-6 contact__form__input">
-              <div class="contact__form__btn">
-                <button>Say hi</button>
-                <button>Get a quote</button>
-              </div>
-              <form class="contact__form__input">
-                <div class="labels">
-                  <label for="#">Name</label>
-                  <input type="text" placeholder="Name" />
-                </div>
-                <div class="labels">
-                  <label for="#">Name</label>
-                  <input type="text" placeholder="Name" />
-                </div>
-                <div class="labels">
-                  <label for="#">Name</label>
-                  <input type="text" placeholder="Name" />
-                </div>
-                <div class="button">Send Message</div>
-              </form>
-            </div>
-            <img
-              src="./assets/imgs/Illustration.svg"
-              alt=""
-              class="col-lg-4"
-              id="img-form"
-            />
-          </div>
-        </div>
-      </section>
     </main>
-    <footer class="container footer">
+    <footer class="container footer" id="footer">
       <div class="footer__links">
-        <img src="./assets/imgs/footer_logo.svg" alt="" />
+        <img src="./assets/imgs/logo__foter.png" alt="" />
         <div class="footer__links__list">
-          <a href="#">About us</a>
-          <a href="#">About us</a>
-          <a href="#">About us</a>
-          <a href="#">About us</a>
-          <a href="#">About us</a>
+          <a href="#services">Serviços</a>
+          <a href="#casos">Casos</a>
+          <a href="#fluxo">Fluxo de Trabalho</a>
+          <a href="#time">Time</a>
         </div>
         <div class="footer__links__icon">
           <i class="bx bxl-github"></i>
@@ -557,7 +513,7 @@
       </div>
       <div class="footer__contact">
         <div class="footer__contact__text">
-          <span>Contact us</span>
+          <span>Contato</span>
           <small>Email: Email@gmail.com</small>
           <small>Phone: 279578877</small>
           <div class="footer__contact__text__addres">
@@ -567,7 +523,7 @@
         </div>
         <div class="footer__contact__form">
           <input type="email" placeholder="Email" />
-          <a href="#">Subscribe to News</a>
+          <a href="#">Enviar e-mail</a>
         </div>
       </div>
 

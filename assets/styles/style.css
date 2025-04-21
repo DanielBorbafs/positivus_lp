@@ -17,7 +17,7 @@ html {
 
   --icon-desktop: 3.6rem;
   /* Cores */
-  --color-destaque: #b9ff66;
+  --color-destaque: #c3e4ef;
   --color-bg-gray: #f3f3f3;
   --color-bg-drak: #191a23;
   --color-bg-white: #ffffff;
@@ -146,7 +146,7 @@ header {
     padding: 2rem 3rem;
     border: 0.01rem solid var(--color-bg-drak);
     border-radius: 1.4rem;
-    max-width: 230px;
+    max-width: 280px;
     text-align: center;
     font-size: 1.6rem;
     color: var(--color-bg-white);
@@ -322,7 +322,7 @@ header {
   height: 100%;
   & h3 {
     font-size: 3.2rem;
-    width: 230px;
+    text-align: start;
     background-color: var(--color-destaque);
   }
   & p {
@@ -330,6 +330,20 @@ header {
   }
 }
 
+.services__card__link {
+  display: flex;
+  gap: 1rem;
+  text-align: center;
+  gap: 1rem;
+  & i {
+    font-size: 2rem;
+    transform: rotate(-40deg);
+  }
+}
+
+.dark i {
+  color: var(--color-bg-white);
+}
 .card__green {
   background-color: var(--color-destaque);
   & .services__card__text h3 {
@@ -385,8 +399,8 @@ header {
 .proposal__img {
   max-height: 20rem;
   & img {
+    margin-top: 1rem;
     height: 300px;
-
     margin-bottom: 2.8rem;
   }
 }
@@ -401,7 +415,6 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: red;
   margin-top: 6rem;
   background-color: var(--color-bg-drak);
   border-radius: 2rem;
@@ -410,6 +423,9 @@ header {
 
 .case__card {
   padding: 5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   & p {
     font-size: var(--p-destkop-alternate);
     color: var(--color-bg-gray);
@@ -437,8 +453,7 @@ header {
 .guide {
   margin-top: 10rem;
   & .guide__text > h2 {
-    width: 100%;
-    text-align: center;
+    text-align: start;
     padding: 0.5rem;
   }
 }
@@ -558,6 +573,9 @@ header {
     top: 0;
     right: 0;
   }
+  & img {
+    border-radius: 64px;
+  }
 }
 .team__list {
   display: flex;
@@ -577,7 +595,9 @@ header {
     display: flex;
     flex-direction: column-reverse;
   }
-
+  .logo__container img {
+    max-width: 10.5rem;
+  }
   .hero__text {
     gap: 1rem;
     & h1 {
@@ -608,7 +628,7 @@ header {
     padding: 1rem;
   }
   .services__card__text {
-    width: 120px;
+    max-width: 18 0px;
     & h3 {
       font-size: 3rem;
       z-index: 1;
@@ -640,6 +660,17 @@ header {
       font-size: 1.6rem;
       text-align: start;
     }
+  }
+
+  .footer__links__list {
+    align-items: start;
+
+    width: 100%;
+  }
+  .footer__links__icon {
+    align-items: start;
+
+    width: 100%;
   }
 }
 
@@ -707,9 +738,12 @@ header {
 
 .feedbacks__text span:nth-child(2) {
   font-weight: 700;
-  color: #b9ff66;
+  color: var(--color-destaque);
 }
 
+.carousel__title > p {
+  color: var(--color-bg-white);
+}
 .carousel-controls {
   display: flex;
   justify-content: center;
@@ -737,13 +771,13 @@ header {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: rgba(185, 255, 102, 0.3);
+  background: rgba(80, 252, 223, 0.3);
   cursor: pointer;
   border: none;
 }
 
 .carousel-dot.active {
-  background: #b9ff66;
+  background: var(--color-destaque);
 }
 
 /* ===================== CONTACT ==================*/
@@ -799,18 +833,6 @@ header {
   margin-bottom: 2.5rem;
 }
 
-.contact__form__btn {
-  display: flex;
-  gap: 1.2rem;
-  padding: 1rem;
-  & button {
-    padding: 1.2rem;
-    font-size: 1.4rem;
-    background-color: var(--color-bg-drak);
-    color: var(--color-bg-gray);
-    border: none;
-  }
-}
 /* =========================== FOOTER ======================*/
 
 .footer {
@@ -862,8 +884,9 @@ header {
     padding: 0.6rem;
     background-color: var(--color-destaque);
     font-size: 2rem;
-    width: 120px;
+    text-align: center;
     font-weight: 600;
+    margin-bottom: 1rem;
   }
   & small {
     color: var(--color-bg-gray);
@@ -900,7 +923,7 @@ header {
   }
 
   & a {
-    background-color: #b9ff66;
+    background-color: var(--color-destaque);
     padding: 1.4rem;
     font-size: 1.6rem;
     color: var(--color-bg-drak);
@@ -979,6 +1002,9 @@ header {
     }
   }
 
+  .services__card img {
+    max-width: 60%;
+  }
   .services__text {
     display: flex;
     flex-direction: column;
@@ -992,13 +1018,17 @@ header {
     padding: 1rem;
   }
   .services__card__text {
-    width: 120px;
     & h3 {
-      font-size: 3rem;
+      font-size: 2rem;
       z-index: 1;
-      text-align: center;
+      text-align: start;
     }
   }
+
+  .services__card__link i {
+    display: none;
+  }
+
   .proposal {
     width: 90%;
     flex-direction: column;
