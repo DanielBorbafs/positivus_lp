@@ -6,7 +6,7 @@ html {
 :root {
   /* Fontes e tamanhos */
   --font-family: 'Space Grotesk', sans-serif;
-  --h1-desktop: 5.4rem;
+  --h1-desktop: 4.8rem;
   --h2-desktop: 4rem;
   --h3-desktop: 3rem;
   --h4-desktop: 2rem;
@@ -78,12 +78,39 @@ header {
   align-items: center;
   & a {
     color: var(--color-bg-drak);
+    position: relative;
+    text-decoration: none;
   }
   & .nav__btn {
     padding: 2rem 3rem;
     border: 0.01rem solid var(--color-bg-drak);
     border-radius: 1.4rem;
   }
+}
+
+.nav__item::after {
+  content: '';
+  position: absolute; /* Importante para posicionar a linha */
+  left: 0;
+  bottom: -0.5rem; /* Ajustei para posicionar um pouco abaixo do texto */
+  width: 100%;
+  height: 2px;
+  background-color: var(
+    --color-destaque
+  ); /* Use background-color para a cor da linha */
+  border-radius: 1rem;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav__item:hover::after {
+  transform: scaleX(1);
+}
+
+.nav__btn:hover {
+  transition: all 0.3s ease-in;
+  background: var(--color-destaque);
 }
 
 .show-menu {
@@ -152,6 +179,14 @@ header {
     color: var(--color-bg-white);
     background: var(--color-bg-drak);
   }
+}
+
+.hero__text > a:hover {
+  transition: all 0.1s ease-in;
+  transform: translateY(-1rem);
+  background: #050507;
+
+  border: 2px solid var(--color-destaque);
 }
 
 .hero__img {
@@ -315,6 +350,12 @@ header {
   justify-content: space-between;
 }
 
+.services__card:hover {
+  transition: all 0.4s ease-in-out;
+  transform: translateY(-16px);
+  cursor: pointer;
+}
+
 .services__card__text {
   display: flex;
   flex-direction: column;
@@ -339,6 +380,10 @@ header {
     font-size: 2rem;
     transform: rotate(-40deg);
   }
+}
+
+.services__card__link:hover {
+  font-weight: 800;
 }
 
 .dark i {
@@ -395,6 +440,11 @@ header {
     color: var(--color-bg-white);
     background: var(--color-bg-drak);
   }
+  & a:hover {
+    transition: all 0.3s ease-out;
+    background-color: #050507;
+    transform: translateY(-6px);
+  }
 }
 .proposal__img {
   max-height: 20rem;
@@ -435,6 +485,9 @@ header {
     & a {
       color: var(--color-destaque);
     }
+    & a:hover {
+      font-weight: 800;
+    }
   }
 }
 
@@ -471,6 +524,7 @@ header {
     border: 0.6px solid var(--color-bg-drak);
     border-radius: 6rem;
     text-align: center;
+    cursor: pointer;
   }
 }
 
@@ -550,6 +604,13 @@ header {
   & p {
     font-size: var(--p-destkop-alternate);
   }
+}
+
+.card__team:hover {
+  cursor: pointer;
+  transition: all 0.4s ease-in;
+  transform: translateY(-16px);
+  border-color: var(--color-destaque);
 }
 .card__team__intro {
   display: flex;
@@ -744,6 +805,7 @@ header {
 .carousel__title > p {
   color: var(--color-bg-white);
 }
+
 .carousel-controls {
   display: flex;
   justify-content: center;
@@ -966,12 +1028,7 @@ header {
     border-radius: 32px 32px 0px 0px;
   }
 }
-/* ========================== MOBILE ================*/
-@media (min-width: 768px) {
-  .feedbacks__text {
-    min-width: calc(50% - 1.2rem);
-  }
-}
+/* ============== DESKTOP ================*/
 
 @media (min-width: 1024px) {
   .feedbacks__text {
@@ -979,6 +1036,102 @@ header {
   }
 }
 
+/* ============== TABLET ================*/
+
+@media (min-width: 577px) and (max-width: 1024px) {
+  .logo__container {
+    padding-left: 1rem;
+  }
+  #toggle {
+    display: inline;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2rem;
+    margin-top: 4rem;
+  }
+  .nav__container_list {
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+    display: none;
+    background: var(--color-bg-gray);
+    -webkit-box-shadow: -2px 18px 25px -17px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: -2px 18px 25px -17px rgba(0, 0, 0, 0.28);
+    box-shadow: -2px 18px 25px -17px rgba(0, 0, 0, 0.28);
+  }
+
+  #navBar.show-menu .nav__container_list {
+    transition: 0.85s all ease-in-out;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .hero__text {
+    gap: 1.2rem;
+  }
+
+  .hero__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .subtitle {
+    text-align: center;
+  }
+
+  .services__text p {
+    font-size: 1.4rem;
+  }
+
+  .services__card__text h3 {
+    font-size: 1.8rem;
+  }
+
+  .services__card img {
+    width: 150px;
+  }
+
+  .proposal {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .proposal__img > img {
+    gap: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .case__card {
+    border-bottom: 1px solid var(--color-destaque);
+  }
+
+  .services__text h2 {
+    font-size: 3rem;
+  }
+
+  .team__list {
+    gap: 2rem;
+  }
+  .card__team {
+    width: 320px;
+  }
+  .footer__contact {
+    display: flex;
+    flex-direction: column;
+
+    & .footer__contact__form {
+      margin-top: 4rem;
+    }
+  }
+}
+
+/* ============= MOBILE RESPONSIVE =================*/
 @media (width <= 576px) {
   .hero__container {
     display: flex;
@@ -1069,14 +1222,5 @@ header {
 
   #img-form {
     display: none;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1280px) {
-  .services__list {
-    justify-content: space-around;
-  }
-  .services__card {
-    width: 45%;
   }
 }
